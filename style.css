@@ -1,0 +1,193 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2D3748;
+    background-color: #F8FAFC;
+}
+
+/* Modern Navy Blue Navbar */
+.bg-primary {
+    background-color: #0F172A !important; /* Deep Premium Navy Blue */
+}
+
+.navbar {
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+    color: #FFFFFF !important;
+}
+
+.nav-link {
+    color: #94A3B8 !important;
+    font-weight: 500;
+    margin: 0 4px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #38BDF8 !important; /* Elegant Sky Blue Highlight */
+}
+
+/* Hero Section Enhancement */
+.hero-section {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 58, 138, 0.88)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat !important;
+    padding: 110px 0 !important;
+}
+
+.hero-section h1 {
+    letter-spacing: -1px;
+}
+
+/* Modern Button Colors */
+.btn-primary {
+    background-color: #2563EB !important;
+    border-color: #2563EB !important;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1D4ED8 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(37, 99, 235, 0.5);
+}
+
+.btn-outline-light {
+    border-radius: 8px;
+    border-width: 2px;
+    font-weight: 600;
+    padding: 9px 24px;
+}
+
+.btn-outline-light:hover {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+}
+
+/* Card Improvements */
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Badges & Accents */
+.badge.bg-primary {
+    background-color: #EFF6FF !important;
+    color: #1D4ED8 !important;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #0F172A !important;
+    border-top: 1px solid #1E293B;
+}/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2D3748;
+    background-color: #F8FAFC;
+}
+
+/* Modern Navy Blue Navbar */
+.bg-primary {
+    background-color: #0F172A !important; /* Deep Premium Navy Blue */
+}
+
+.navbar {
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+    color: #FFFFFF !important;
+}
+
+.nav-link {
+    color: #94A3B8 !important;
+    font-weight: 500;
+    margin: 0 4px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #38BDF8 !important; /* Elegant Sky Blue Highlight */
+}
+
+/* Hero Section Enhancement */
+.hero-section {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 58, 138, 0.88)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat !important;
+    padding: 110px 0 !important;
+}
+
+.hero-section h1 {
+    letter-spacing: -1px;
+}
+
+/* Modern Button Colors */
+.btn-primary {
+    background-color: #2563EB !important;
+    border-color: #2563EB !important;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1D4ED8 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(37, 99, 235, 0.5);
+}
+
+.btn-outline-light {
+    border-radius: 8px;
+    border-width: 2px;
+    font-weight: 600;
+    padding: 9px 24px;
+}
+
+.btn-outline-light:hover {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+}
+
+/* Card Improvements */
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Badges & Accents */
+.badge.bg-primary {
+    background-color: #EFF6FF !important;
+    color: #1D4ED8 !important;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #0F172A !important;
+    border-top: 1px solid #1E293B;
+}

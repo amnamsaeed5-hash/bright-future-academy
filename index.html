@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bright Future Academy - Home</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,120 +15,128 @@
 </head>
 <body>
 
-    <!-- Header / Navigation Bar -->
-   <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand fw-bold fs-4" href="index.html">
-            <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-                <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: #0d1b2a;">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-    <!-- Hero Section with Background Banner Image -->
-    <section class="hero-section text-center text-white py-5 position-relative" style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat; padding: 120px 0 !important;">
-        <div class="container py-5">
-            <h1 class="display-3 fw-bold mb-3">Empowering Minds, Shaping Futures</h1>
-            <p class="lead max-w-600 mx-auto mb-4 fs-4 text-light">Welcome to Bright Future Academy. Building strong foundations for academic & professional success.</p>
-            <div>
-                <a href="courses.html" class="btn btn-primary btn-lg me-3 px-4 shadow">Explore Courses</a>
-                <a href="admissions.html" class="btn btn-outline-light btn-lg px-4">Apply Now</a>
+    <!-- Hero Section -->
+    <section class="text-white text-center py-5 position-relative overflow-hidden" style="background-color: #0d1b2a; padding: 100px 0 !important;">
+        <div class="container position-relative py-4">
+            <h1 class="fw-extrabold display-3 mb-3">Empowering Minds, Shaping Futures</h1>
+            <p class="lead fs-4 text-white-50 mb-4 mx-auto" style="max-width: 700px;">Welcome to Bright Future Academy. Building strong foundations for academic & professional success.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="courses.html" class="btn btn-light text-dark btn-lg fw-bold px-4 py-3 shadow-sm rounded-pill">Explore Courses</a>
+                <a href="admissions.html" class="btn btn-outline-light btn-lg fw-bold px-4 py-3 rounded-pill">Apply Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Features / Highlights Section -->
+    <!-- Features Section -->
     <section class="py-5 bg-light">
-        <div class="container">
+        <div class="container py-4">
             <div class="row g-4 text-center">
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-                        <i class="fa-solid fa-chalkboard-user text-primary display-4 mb-3"></i>
-                        <h4 class="fw-bold">Expert Faculty</h4>
-                        <p class="text-muted">Highly qualified and experienced teachers dedicated to student success.</p>
+                    <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#facultyModal">
+                        <div class="card-body">
+                            <div class="icon-box bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center fs-3" style="width: 70px; height: 70px;">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <h4 class="fw-bold mb-2">Expert Faculty</h4>
+                            <p class="text-muted small mb-3">Highly qualified and experienced teachers dedicated to student success.</p>
+                            <span class="text-primary fw-semibold small">Click to read more <i class="fa-solid fa-arrow-right ms-1"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-                        <i class="fa-solid fa-laptop-code text-primary display-4 mb-3"></i>
-                        <h4 class="fw-bold">Modern Computer Labs</h4>
-                        <p class="text-muted">State-of-the-art IT labs equipped with high-speed internet and modern systems.</p>
+                    <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#labsModal">
+                        <div class="card-body">
+                            <div class="icon-box bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center fs-3" style="width: 70px; height: 70px;">
+                                <i class="fa-solid fa-computer"></i>
+                            </div>
+                            <h4 class="fw-bold mb-2">Modern Computer Labs</h4>
+                            <p class="text-muted small mb-3">State-of-the-art IT labs equipped with high-speed internet and modern systems.</p>
+                            <span class="text-primary fw-semibold small">Click to read more <i class="fa-solid fa-arrow-right ms-1"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-                        <i class="fa-solid fa-award text-primary display-4 mb-3"></i>
-                        <h4 class="fw-bold">High Success Rate</h4>
-                        <p class="text-muted">Consistent top performance in board exams and competitive entry tests.</p>
+                    <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#successModal">
+                        <div class="card-body">
+                            <div class="icon-box bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center fs-3" style="width: 70px; height: 70px;">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <h4 class="fw-bold mb-2">High Success Rate</h4>
+                            <p class="text-muted small mb-3">Consistent top performance in board exams and competitive entry tests.</p>
+                            <span class="text-primary fw-semibold small">Click to read more <i class="fa-solid fa-arrow-right ms-1"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Courses Overview -->
+    <!-- Top Offered Programs -->
     <section class="py-5">
-        <div class="container">
+        <div class="container py-4">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="fw-bold text-dark">Top Offered Programs</h2>
-                <a href="courses.html" class="btn btn-outline-primary">View All Courses <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                <h2 class="fw-bold text-dark mb-0">Top Offered Programs</h2>
+                <a href="courses.html" class="btn btn-outline-primary fw-semibold rounded-pill px-4">View All Courses</a>
             </div>
             <div class="row g-4">
-                <!-- Course 1 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Web Development" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <span class="badge bg-primary mb-2">Computer Science</span>
-                            <h5 class="fw-bold">Frontend Web Development</h5>
-                            <p class="text-muted small">Master HTML5, CSS3, Bootstrap 5, and JavaScript to build modern responsive websites.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fw-bold text-success"><i class="fa-regular fa-clock me-1"></i> 4 Months</span>
-                                <a href="courses.html" class="btn btn-sm btn-primary">Details</a>
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-success-subtle text-success mb-2 align-self-start fw-bold">Computer Science</span>
+                            <h4 class="fw-bold mb-2">Frontend Web Development</h4>
+                            <p class="text-muted small mb-4">Master HTML5, CSS3, Bootstrap 5, and JavaScript to build modern responsive websites.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary"><i class="fa-regular fa-clock me-1"></i> 4 Months</span>
+                                <button class="btn btn-dark btn-sm rounded-pill px-3 fw-bold" data-bs-toggle="modal" data-bs-target="#courseDetail1">Details</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Course 2 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Pre-Medical" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <span class="badge bg-danger mb-2">Academic</span>
-                            <h5 class="fw-bold">MDCAT & Pre-Medical Prep</h5>
-                            <p class="text-muted small">Comprehensive guidance and test series for Biology, Physics, and Chemistry.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fw-bold text-success"><i class="fa-regular fa-clock me-1"></i> 1 Year</span>
-                                <a href="courses.html" class="btn btn-sm btn-primary">Details</a>
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-warning-subtle text-warning mb-2 align-self-start fw-bold">Academic</span>
+                            <h4 class="fw-bold mb-2">MDCAT & Pre-Medical Prep</h4>
+                            <p class="text-muted small mb-4">Comprehensive guidance and test series for Biology, Physics, and Chemistry.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary"><i class="fa-regular fa-clock me-1"></i> 1 Year</span>
+                                <button class="btn btn-dark btn-sm rounded-pill px-3 fw-bold" data-bs-toggle="modal" data-bs-target="#courseDetail2">Details</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Course 3 -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Spoken English" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <span class="badge bg-warning text-dark mb-2">Languages</span>
-                            <h5 class="fw-bold">Spoken English & Communication</h5>
-                            <p class="text-muted small">Improve fluency, public speaking, grammar, and professional presentation skills.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fw-bold text-success"><i class="fa-regular fa-clock me-1"></i> 3 Months</span>
-                                <a href="courses.html" class="btn btn-sm btn-primary">Details</a>
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-info-subtle text-info mb-2 align-self-start fw-bold">Languages</span>
+                            <h4 class="fw-bold mb-2">Spoken English & Communication</h4>
+                            <p class="text-muted small mb-4">Improve fluency, public speaking, grammar, and professional presentation skills.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary"><i class="fa-regular fa-clock me-1"></i> 3 Months</span>
+                                <button class="btn btn-dark btn-sm rounded-pill px-3 fw-bold" data-bs-toggle="modal" data-bs-target="#courseDetail3">Details</button>
                             </div>
                         </div>
                     </div>
@@ -138,211 +145,221 @@
         </div>
     </section>
 
-    <!-- Quick Campus Preview Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
+    <!-- Why Choose Us -->
+    <section class="py-5 bg-white border-top">
+        <div class="container py-4">
             <div class="row align-items-center g-5">
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg" alt="Academy Life">
+                <div class="col-lg-6">
+                    <div class="rounded-4 overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Students Learning" class="img-fluid w-100">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="fw-bold mb-3">Why Choose Bright Future Academy?</h2>
-                    <p class="text-muted leading-relaxed mb-4">We provide a supportive, interactive learning environment where every student receives personalized attention to excel academically and professionally.</p>
-                    <ul class="list-unstyled text-muted">
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Weekly Mock Tests & Performance Reports</li>
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Hands-on Practical Project Training</li>
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Career Counseling & Student Mentorship</li>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3 text-dark">Why Choose Bright Future Academy?</h2>
+                    <p class="text-muted mb-4">We provide a supportive, interactive learning environment where every student receives personalized attention to excel academically and professionally.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-circle-check text-success fs-5 me-3"></i> Weekly Mock Tests & Performance Reports</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-circle-check text-success fs-5 me-3"></i> Hands-on Practical Project Training</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-circle-check text-success fs-5 me-3"></i> Career Counseling & Student Mentorship</li>
                     </ul>
-                    <a href="about.html" class="btn btn-primary mt-2">Learn More About Us</a>
+                    <a href="about.html" class="btn btn-dark btn-lg rounded-pill px-4 fw-bold shadow-sm">Learn More About Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0 text-muted">&copy; 2026 Bright Future Academy. All Rights Reserved.</p>
+    <!-- Corrected Footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: #0d1b2a;">
+        <div class="container text-md-start text-center">
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold fw-bold" style="color: #4ea8de;">
+                        <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
+                    </h5>
+                    <p class="text-white-50 small">Empowering the next generation of leaders, developers, and medical professionals with world-class education.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white fw-bold">Quick Links</h6>
+                    <p class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></p>
+                    <p class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></p>
+                    <p class="mb-2"><a href="courses.html" class="text-white-50 text-decoration-none">Courses</a></p>
+                    <p class="mb-2"><a href="admissions.html" class="text-white-50 text-decoration-none">Admissions</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white fw-bold">Support</h6>
+                    <p class="mb-2"><a href="results.html" class="text-white-50 text-decoration-none">Check Results</a></p>
+                    <p class="mb-2"><a href="gallery.html" class="text-white-50 text-decoration-none">Campus Gallery</a></p>
+                    <p class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white fw-bold">Contact</h6>
+                    <p class="text-white-50 small mb-2"><i class="fa-solid fa-home me-2"></i> Main Campus, Education City Road, Pakistan</p>
+                    <p class="text-white-50 small mb-2"><i class="fa-solid fa-envelope me-2"></i> info@brightfutureacademy.edu.pk</p>
+                    <p class="text-white-50 small mb-2"><i class="fa-solid fa-phone me-2"></i> +92 300 1234567</p>
+                </div>
+            </div>
+            <hr class="mb-4 mt-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-white-50 small mb-0">&copy; 2026 <strong>Bright Future Academy</strong>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Future Academy - Home</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Header / Navigation Bar -->
-   <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand fw-bold fs-4" href="index.html">
-            <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-                <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
+    <!-- Modals -->
+    <div class="modal fade" id="facultyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header text-white" style="background-color: #0d1b2a;">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-chalkboard-user me-2"></i>Expert Faculty Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted">Our teaching staff comprises industry veterans, gold medalists, and subject matter experts with over 10+ years of academic experience.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">✔ PhD & Masters qualified professors</li>
+                        <li class="list-group-item">✔ Dedicated mentoring sessions for weak students</li>
+                        <li class="list-group-item">✔ Interactive training methodology & workshops</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
 
-    <!-- Hero Section with Background Banner Image -->
-    <section class="hero-section text-center text-white py-5 position-relative" style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat; padding: 120px 0 !important;">
-        <div class="container py-5">
-            <h1 class="display-3 fw-bold mb-3">Empowering Minds, Shaping Futures</h1>
-            <p class="lead max-w-600 mx-auto mb-4 fs-4 text-light">Welcome to Bright Future Academy. Building strong foundations for academic & professional success.</p>
-            <div>
-                <a href="courses.html" class="btn btn-primary btn-lg me-3 px-4 shadow">Explore Courses</a>
-                <a href="admissions.html" class="btn btn-outline-light btn-lg px-4">Apply Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features / Highlights Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-                        <i class="fa-solid fa-chalkboard-user text-primary display-4 mb-3"></i>
-                        <h4 class="fw-bold">Expert Faculty</h4>
-                        <p class="text-muted">Highly qualified and experienced teachers dedicated to student success.</p>
-                    </div>
+    <div class="modal fade" id="labsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header text-white" style="background-color: #0d1b2a;">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-computer me-2"></i>Modern Computer Labs</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-                        <i class="fa-solid fa-laptop-code text-primary display-4 mb-3"></i>
-                        <h4 class="fw-bold">Modern Computer Labs</h4>
-                        <p class="text-muted">State-of-the-art IT labs equipped with high-speed internet and modern systems.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-                        <i class="fa-solid fa-award text-primary display-4 mb-3"></i>
-                        <h4 class="fw-bold">High Success Rate</h4>
-                        <p class="text-muted">Consistent top performance in board exams and competitive entry tests.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Courses Overview -->
-    <section class="py-5">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="fw-bold text-dark">Top Offered Programs</h2>
-                <a href="courses.html" class="btn btn-outline-primary">View All Courses <i class="fa-solid fa-arrow-right ms-1"></i></a>
-            </div>
-            <div class="row g-4">
-                <!-- Course 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Web Development" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <span class="badge bg-primary mb-2">Computer Science</span>
-                            <h5 class="fw-bold">Frontend Web Development</h5>
-                            <p class="text-muted small">Master HTML5, CSS3, Bootstrap 5, and JavaScript to build modern responsive websites.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fw-bold text-success"><i class="fa-regular fa-clock me-1"></i> 4 Months</span>
-                                <a href="courses.html" class="btn btn-sm btn-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Pre-Medical" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <span class="badge bg-danger mb-2">Academic</span>
-                            <h5 class="fw-bold">MDCAT & Pre-Medical Prep</h5>
-                            <p class="text-muted small">Comprehensive guidance and test series for Biology, Physics, and Chemistry.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fw-bold text-success"><i class="fa-regular fa-clock me-1"></i> 1 Year</span>
-                                <a href="courses.html" class="btn btn-sm btn-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Spoken English" style="height: 200px; object-fit: cover;">
-                        <div class="card-body p-4">
-                            <span class="badge bg-warning text-dark mb-2">Languages</span>
-                            <h5 class="fw-bold">Spoken English & Communication</h5>
-                            <p class="text-muted small">Improve fluency, public speaking, grammar, and professional presentation skills.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fw-bold text-success"><i class="fa-regular fa-clock me-1"></i> 3 Months</span>
-                                <a href="courses.html" class="btn btn-sm btn-primary">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Campus Preview Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg" alt="Academy Life">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="fw-bold mb-3">Why Choose Bright Future Academy?</h2>
-                    <p class="text-muted leading-relaxed mb-4">We provide a supportive, interactive learning environment where every student receives personalized attention to excel academically and professionally.</p>
-                    <ul class="list-unstyled text-muted">
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Weekly Mock Tests & Performance Reports</li>
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Hands-on Practical Project Training</li>
-                        <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Career Counseling & Student Mentorship</li>
+                <div class="modal-body p-4">
+                    <p class="text-muted">Our computer laboratories are fully equipped with high-end systems, high-speed fiber internet, and latest software tools.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">✔ 24/7 Uninterrupted power backup & AC labs</li>
+                        <li class="list-group-item">✔ Licensed software installed for development & design</li>
+                        <li class="list-group-item">✔ Supervised practical sessions for every student</li>
                     </ul>
-                    <a href="about.html" class="btn btn-primary mt-2">Learn More About Us</a>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0 text-muted">&copy; 2026 Bright Future Academy. All Rights Reserved.</p>
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header text-white" style="background-color: #0d1b2a;">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-award me-2"></i>High Success Rate</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted">Bright Future Academy takes pride in maintaining a 98% success rate in board examinations and competitive professional entry tests.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">✔ Hundreds of top positions secured in past 5 years</li>
+                        <li class="list-group-item">✔ Regular mock exams simulating real board environments</li>
+                        <li class="list-group-item">✔ Scholarship opportunities for position holders</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
 
-    <!-- Bootstrap JS -->
+    <div class="modal fade" id="courseDetail1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold">Frontend Web Development</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p><strong>Duration:</strong> 4 Months</p>
+                    <p><strong>Overview:</strong> Build professional, responsive websites from scratch using modern web standards.</p>
+                    <h6 class="fw-bold mt-3">What you will learn:</h6>
+                    <ul>
+                        <li>HTML5 & Semantic markup</li>
+                        <li>Advanced CSS3 & Flexbox/Grid</li>
+                        <li>Bootstrap 5 framework styling</li>
+                        <li>JavaScript DOM manipulation & ES6</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="admissions.html?course=frontend" class="btn btn-success rounded-pill px-4 fw-bold">Enroll in Course</a>
+                    <button type="button" class="btn btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="courseDetail2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title fw-bold">MDCAT & Pre-Medical Prep</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p><strong>Duration:</strong> 1 Year</p>
+                    <p><strong>Overview:</strong> Intensive coaching program designed specifically to crack medical entry tests with top scores.</p>
+                    <h6 class="fw-bold mt-3">Key Features:</h6>
+                    <ul>
+                        <li>Comprehensive concept building in Biology, Physics & Chemistry</li>
+                        <li>Past papers practice & conceptual MCQ drills</li>
+                        <li>Weekly grand tests & detailed analytical feedback</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="admissions.html?course=mdcat" class="btn btn-warning rounded-pill px-4 fw-bold text-dark">Enroll in Course</a>
+                    <button type="button" class="btn btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="courseDetail3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title fw-bold">Spoken English & Communication</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p><strong>Duration:</strong> 3 Months</p>
+                    <p><strong>Overview:</strong> Overcome hesitation and master fluent conversational English and professional corporate communication.</p>
+                    <h6 class="fw-bold mt-3">Key Features:</h6>
+                    <ul>
+                        <li>Daily interactive speaking sessions & pronunciation drills</li>
+                        <li>Vocabulary building and grammar correction</li>
+                        <li>Interview preparation & presentation skills</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="admissions.html?course=english" class="btn btn-info rounded-pill px-4 fw-bold text-white">Enroll in Course</a>
+                    <button type="button" class="btn btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
->>>>>>> da4470e6f8637bdaa691c9ef6db40131102b8424
 </html>

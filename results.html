@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Future Academy - Check Results</title>
+    <title>Bright Future Academy - Results</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -14,10 +13,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
+<body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: #0d1b2a;">
         <div class="container">
             <a class="navbar-brand fw-bold fs-4" href="index.html">
                 <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
@@ -39,90 +38,89 @@
         </div>
     </nav>
 
-    <!-- Header Banner -->
-    <section class="bg-primary text-white text-center py-5">
-        <div class="container py-3">
-            <h1 class="fw-bold display-4"><i class="fa-solid fa-square-poll-vertical me-2"></i>Student Examination Results</h1>
-            <p class="lead">Enter your Roll Number below to view your detailed academic performance & scorecard.</p>
+    <!-- Results Hero Section -->
+    <section class="text-white text-center py-5 position-relative overflow-hidden" style="background-color: #0d1b2a; padding: 80px 0 !important;">
+        <div class="container position-relative py-3">
+            <h1 class="fw-extrabold display-3 mb-2">Student Examination Results</h1>
+            <p class="lead text-white-50 mx-auto" style="max-width: 600px;">Enter any Roll Number from 101 to 150 to view your detailed academic performance & scorecard.</p>
         </div>
     </section>
 
-    <!-- Search Section -->
-    <section class="py-5">
-        <div class="container py-3">
+    <!-- Results Search Portal Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-4">
             <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
-                        <div class="text-center mb-4">
-                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex p-3 mb-2">
-                                <i class="fa-solid fa-id-card fa-2x"></i>
-                            </div>
-                            <h3 class="fw-bold text-dark">Search Portal</h3>
-                            <p class="text-muted small mb-0">Official Examination Portal for Session 2025-2026</p>
+                <div class="col-md-7 col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white text-center">
+                        <div class="icon-box bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center fs-3" style="width: 70px; height: 70px;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-
-                        <form id="resultForm">
-                            <div class="mb-3">
-                                <label for="rollNo" class="form-label fw-bold text-secondary">Enter Roll Number</label>
-                                <div class="input-group">
-                                    <span class="input-group-text bg-light text-primary border-secondary-subtle"><i class="fa-solid fa-hashtag"></i></span>
-                                    <input type="text" class="form-control form-control-lg border-secondary-subtle fs-6" id="rollNo" placeholder="e.g. 101, 102, 103" required>
-                                </div>
-                                <div class="form-text mt-2"><i class="fa-solid fa-circle-info text-primary me-1"></i>Demo Roll Numbers to test: <strong>101</strong>, <strong>102</strong>, or <strong>103</strong></div>
+                        <h3 class="fw-bold mb-1">Search Portal</h3>
+                        <p class="text-muted small mb-4">Official Examination Portal for Session 2025-2026</p>
+                        
+                        <div class="mb-3 text-start">
+                            <label for="rollNoInput" class="form-label fw-bold text-dark small">Enter Roll Number</label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text bg-light text-muted fw-bold">#</span>
+                                <input type="number" id="rollNoInput" class="form-control form-control-lg" placeholder="Enter Roll No (101 - 150)" min="101" max="150">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm py-3 mt-2">
-                                <i class="fa-solid fa-magnifying-glass me-2"></i>Check Result
-                            </button>
-                        </form>
+                            <small class="text-muted">You can test any Roll Number from <strong>101 to 150</strong></small>
+                        </div>
+                        <button type="button" onclick="checkResult()" class="btn btn-dark btn-lg w-100 rounded-pill fw-bold py-3 mt-2">Check Result</button>
 
-                        <!-- Dynamic Result Display Area -->
-                        <div id="resultOutput" class="mt-4"></div>
+                        <!-- Result Display Box -->
+                        <div id="resultDisplay" class="mt-4 text-start d-none p-4 border rounded-3 bg-white shadow-sm">
+                            <!-- Result content will be injected via JS -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Toppers Board Section -->
-    <section class="py-5 bg-white border-top">
-        <div class="container">
+    <!-- Academy Session Toppers Section Restored -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
             <div class="text-center mb-5">
-                <span class="badge bg-warning text-dark mb-2 px-3 py-2 fs-6 fw-bold"><i class="fa-solid fa-trophy me-1"></i>Hall of Fame</span>
-                <h2 class="fw-bold">Academy Session Toppers</h2>
-                <p class="text-muted">Celebrating top achievers in recent evaluation exams</p>
+                <span class="badge bg-warning-subtle text-warning fw-bold mb-2 px-3 py-2 rounded-pill">Top Achievers</span>
+                <h2 class="fw-bold text-dark">Academy Session Toppers</h2>
+                <p class="text-muted">Celebrating top achievers in recent evaluation exams.</p>
             </div>
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4">
+                <!-- Topper 1 -->
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-light">
-                        <span class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle px-3 py-1 rounded-pill">1st Position</span>
-                        <div class="py-3 mt-2">
-                            <i class="fa-solid fa-award text-warning fa-3x mb-2"></i>
-                            <h5 class="fw-bold mb-1">Ahmed Raza</h5>
-                            <p class="text-muted small mb-1">Frontend Web Development</p>
-                            <span class="fw-bold text-success fs-5">485 / 500 (97%)</span>
+                    <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100 position-relative">
+                        <div class="badge bg-warning text-dark fw-bold position-absolute top-0 start-50 translate-middle rounded-pill px-3 py-1">1st Position</div>
+                        <div class="avatar mx-auto mb-3 mt-2 rounded-circle overflow-hidden shadow-sm border border-2 border-warning" style="width: 90px; height: 90px;">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Ahmed Raza" class="w-100 h-100 object-fit-cover">
                         </div>
+                        <h4 class="fw-bold mb-1 fs-5">Ahmed Raza</h4>
+                        <span class="badge bg-success-subtle text-success mb-2 fw-semibold">Frontend Web Development</span>
+                        <p class="text-muted fw-bold fs-4 text-dark mb-0">485 / 500 <span class="fs-6 text-success fw-bold">(97%)</span></p>
                     </div>
                 </div>
+                <!-- Topper 2 -->
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-light">
-                        <span class="badge bg-secondary position-absolute top-0 start-50 translate-middle px-3 py-1 rounded-pill">2nd Position</span>
-                        <div class="py-3 mt-2">
-                            <i class="fa-solid fa-award text-secondary fa-3x mb-2"></i>
-                            <h5 class="fw-bold mb-1">Fatima Noor</h5>
-                            <p class="text-muted small mb-1">Python & Machine Learning</p>
-                            <span class="fw-bold text-success fs-5">472 / 500 (94.4%)</span>
+                    <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100 position-relative">
+                        <div class="badge bg-secondary text-white fw-bold position-absolute top-0 start-50 translate-middle rounded-pill px-3 py-1">2nd Position</div>
+                        <div class="avatar mx-auto mb-3 mt-2 rounded-circle overflow-hidden shadow-sm border border-2 border-secondary" style="width: 90px; height: 90px;">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Fatima Noor" class="w-100 h-100 object-fit-cover">
                         </div>
+                        <h4 class="fw-bold mb-1 fs-5">Fatima Noor</h4>
+                        <span class="badge bg-warning-subtle text-warning mb-2 fw-semibold">Python & Machine Learning</span>
+                        <p class="text-muted fw-bold fs-4 text-dark mb-0">472 / 500 <span class="fs-6 text-success fw-bold">(94.4%)</span></p>
                     </div>
                 </div>
+                <!-- Topper 3 -->
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-light">
-                        <span class="badge bg-danger position-absolute top-0 start-50 translate-middle px-3 py-1 rounded-pill">3rd Position</span>
-                        <div class="py-3 mt-2">
-                            <i class="fa-solid fa-award text-danger fa-3x mb-2"></i>
-                            <h5 class="fw-bold mb-1">Hamza Ali</h5>
-                            <p class="text-muted small mb-1">MDCAT Preparation</p>
-                            <span class="fw-bold text-success fs-5">465 / 500 (93%)</span>
+                    <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100 position-relative">
+                        <div class="badge bg-danger text-white fw-bold position-absolute top-0 start-50 translate-middle rounded-pill px-3 py-1">3rd Position</div>
+                        <div class="avatar mx-auto mb-3 mt-2 rounded-circle overflow-hidden shadow-sm border border-2 border-danger" style="width: 90px; height: 90px;">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" alt="Hamza Ali" class="w-100 h-100 object-fit-cover">
                         </div>
+                        <h4 class="fw-bold mb-1 fs-5">Hamza Ali</h4>
+                        <span class="badge bg-danger-subtle text-danger mb-2 fw-semibold">MDCAT Preparation</span>
+                        <p class="text-muted fw-bold fs-4 text-dark mb-0">465 / 500 <span class="fs-6 text-success fw-bold">(93%)</span></p>
                     </div>
                 </div>
             </div>
@@ -130,239 +128,94 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0 text-muted">&copy; 2026 Bright Future Academy. All Rights Reserved.</p>
+    <footer class="text-white pt-5 pb-4" style="background-color: #0d1b2a;">
+        <div class="container text-md-start text-center">
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold fw-bold" style="color: #4ea8de;">
+                        <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
+                    </h5>
+                    <p class="text-white-50 small">Empowering the next generation of leaders, developers, and medical professionals with world-class education.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white fw-bold">Quick Links</h6>
+                    <p class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></p>
+                    <p class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></p>
+                    <p class="mb-2"><a href="courses.html" class="text-white-50 text-decoration-none">Courses</a></p>
+                    <p class="mb-2"><a href="admissions.html" class="text-white-50 text-decoration-none">Admissions</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white fw-bold">Support</h6>
+                    <p class="mb-2"><a href="results.html" class="text-white-50 text-decoration-none">Check Results</a></p>
+                    <p class="mb-2"><a href="gallery.html" class="text-white-50 text-decoration-none">Campus Gallery</a></p>
+                    <p class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white fw-bold">Contact</h6>
+                    <p class="text-white-50 small mb-2"><i class="fa-solid fa-home me-2"></i> Main Campus, Education City Road, Pakistan</p>
+                    <p class="text-white-50 small mb-2"><i class="fa-solid fa-envelope me-2"></i> info@brightfutureacademy.edu.pk</p>
+                    <p class="text-white-50 small mb-2"><i class="fa-solid fa-phone me-2"></i> +92 300 1234567</p>
+                </div>
+            </div>
+            <hr class="mb-4 mt-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-white-50 small mb-0">&copy; 2026 <strong>Bright Future Academy</strong>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript to Handle 50 Student Results (Roll No 101 to 150) -->
+    <script>
+        const firstNames = ["Ali", "Ayesha", "Bilal", "Fatima", "Hassan", "Kanza", "Muhammad", "Noor", "Saad", "Zainab", "Usman", "Amina", "Hamza", "Hira", "Talha", "Sana", "Zeeshan", "Mehwish", "Danyal", "Laiba"];
+        const lastNames = ["Raza", "Khan", "Ahmed", "Noor", "Ali", "Malik", "Butt", "Chaudhry", "Sheikh", "Qureshi", "Ghafoor", "Iqbal", "Saeed", "Nasir", "Akram"];
+        const coursesList = ["Frontend Web Development", "Python & Machine Learning", "MDCAT Preparation", "ECAT Preparation", "Spoken English & Communication", "Data Science & Analytics", "Graphic & UI/UX Design", "Digital Marketing & SEO", "Computer Science Core"];
+
+        function checkResult() {
+            const rollInput = parseInt(document.getElementById('rollNoInput').value);
+            const displayBox = document.getElementById('resultDisplay');
+            displayBox.classList.remove('d-none');
+
+            if (isNaN(rollInput) || rollInput < 101 || rollInput > 150) {
+                displayBox.innerHTML = `<h5 class="fw-bold text-danger mb-2"><i class="fa-solid fa-circle-xmark me-2"></i>Invalid Roll Number</h5><p class="mb-0 text-muted">Please enter any Roll Number between <strong>101 and 150</strong>.</p>`;
+                return;
+            }
+
+            const nameSeed = rollInput * 7;
+            const fName = firstNames[nameSeed % firstNames.length];
+            const lName = lastNames[(nameSeed * 3) % lastNames.length];
+            const studentName = fName + " " + lName;
+            const course = coursesList[rollInput % coursesList.length];
+            const marksObtained = 380 + ((rollInput * 13) % 111);
+            const percentage = ((marksObtained / 500) * 100).toFixed(1);
+            let grade = "A+";
+            if (percentage < 70) grade = "B";
+            else if (percentage < 80) grade = "A";
+
+            displayBox.innerHTML = `
+                <h5 class="fw-bold text-success mb-3"><i class="fa-solid fa-circle-check me-2"></i>Official Result Card</h5>
+                <hr class="my-2">
+                <p class="mb-2"><strong>Roll Number:</strong> #${rollInput}</p>
+                <p class="mb-2"><strong>Student Name:</strong> ${studentName}</p>
+                <p class="mb-2"><strong>Enrolled Course:</strong> ${course}</p>
+                <p class="mb-2"><strong>Total Marks:</strong> ${marksObtained} / 500</p>
+                <p class="mb-2"><strong>Percentage:</strong> ${percentage}%</p>
+                <p class="mb-0"><strong>Grade Achieved:</strong> <span class="badge bg-success">${grade}</span></p>
+            `;
+        }
+    </script>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Future Academy - Check Results</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Header / Navigation Bar -->
-    <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand fw-bold fs-4" href="index.html">
-            <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="results.html">Results</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-                <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-    <!-- Page Header Banner -->
-    <section class="bg-primary text-white text-center py-5">
-        <div class="container py-3">
-            <h1 class="fw-bold display-4">Student Examination Result</h1>
-            <p class="lead">Enter your Roll Number below to view your subject-wise scorecard.</p>
-        </div>
-    </section>
-
-    <!-- Result Search Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card shadow-sm border-0 p-4">
-                        <h4 class="fw-bold text-center mb-3 text-primary">Search Result</h4>
-                        <form id="resultForm">
-                            <div class="mb-3">
-                                <label for="rollNumber" class="form-label fw-semibold">Enter Roll Number:</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fa-solid fa-id-card"></i></span>
-                                    <input type="text" class="form-control" id="rollNumber" placeholder="e.g. 101, 102, 103" required>
-                                </div>
-                                <div class="form-text text-muted">Try Roll Numbers: <strong>101</strong>, <strong>102</strong>, or <strong>103</strong> for demo.</div>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100 fw-semibold py-2">
-                                <i class="fa-solid fa-magnifying-glass me-2"></i>Check Result
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Result Output Box (Hidden by default) -->
-            <div class="row justify-content-center mt-5 d-none" id="resultCard">
-                <div class="col-md-10 col-lg-8">
-                    <div class="card shadow-lg border-0">
-                        <div class="card-header bg-primary text-white p-3 d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0 fw-bold" id="studentName">Student Name</h5>
-                            <span class="badge bg-success fs-6" id="overallStatus">PASSED</span>
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="row mb-3 fs-6">
-                                <div class="col-sm-6 mb-2"><strong>Roll Number:</strong> <span id="displayRoll">101</span></div>
-                                <div class="col-sm-6 mb-2"><strong>Class/Course:</strong> <span id="displayClass">Metric / FSC</span></div>
-                            </div>
-
-                            <!-- Subject Wise Marks Table -->
-                            <div class="table-responsive">
-                                <table class="table table-bordered align-middle">
-                                    <thead class="table-dark">
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Total Marks</th>
-                                            <th>Obtained Marks</th>
-                                            <th>Grade</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="marksTableBody">
-                                        <!-- Marks will be inserted dynamically using JavaScript -->
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mt-4 p-3 bg-light rounded">
-                                <h5 class="mb-0 fw-bold">Total Score:</h5>
-                                <h5 class="mb-0 text-primary fw-bold" id="totalScore">0 / 0</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Error Alert -->
-            <div class="row justify-content-center mt-4 d-none" id="errorAlert">
-                <div class="col-md-8 col-lg-6">
-                    <div class="alert alert-danger text-center shadow-sm" role="alert">
-                        <i class="fa-solid fa-circle-xmark me-2"></i>No result found for this Roll Number. Please try <strong>101</strong>, <strong>102</strong>, or <strong>103</strong>.
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0 text-muted">&copy; 2026 Bright Future Academy. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Inline Result Logic Script -->
-    <script>
-        const studentDatabase = {
-            "101": {
-                name: "Amna Saeed",
-                className: "Computer Science (FS.c / Matric)",
-                status: "Passed",
-                subjects: [
-                    { name: "Mathematics", total: 100, obtained: 92, grade: "A+" },
-                    { name: "Physics", total: 100, obtained: 88, grade: "A+" },
-                    { name: "Computer Science", total: 100, obtained: 95, grade: "A+" },
-                    { name: "English", total: 75, obtained: 68, grade: "A" },
-                    { name: "Urdu", total: 75, obtained: 65, grade: "A" }
-                ]
-            },
-            "102": {
-                name: "Ali Ahmed",
-                className: "Pre-Engineering",
-                status: "Passed",
-                subjects: [
-                    { name: "Mathematics", total: 100, obtained: 78, grade: "A" },
-                    { name: "Physics", total: 100, obtained: 82, grade: "A+" },
-                    { name: "Chemistry", total: 100, obtained: 74, grade: "B" },
-                    { name: "English", total: 75, obtained: 60, grade: "B" },
-                    { name: "Urdu", total: 75, obtained: 58, grade: "C" }
-                ]
-            },
-            "103": {
-                name: "Sara Khan",
-                className: "Pre-Medical",
-                status: "Passed",
-                subjects: [
-                    { name: "Biology", total: 100, obtained: 91, grade: "A+" },
-                    { name: "Physics", total: 100, obtained: 85, grade: "A+" },
-                    { name: "Chemistry", total: 100, obtained: 89, grade: "A+" },
-                    { name: "English", total: 75, obtained: 70, grade: "A+" },
-                    { name: "Urdu", total: 75, obtained: 66, grade: "A" }
-                ]
-            }
-        };
-
-        document.getElementById("resultForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            const rollNumInput = document.getElementById("rollNumber").value.trim();
-            const student = studentDatabase[rollNumInput];
-
-            const resultCard = document.getElementById("resultCard");
-            const errorAlert = document.getElementById("errorAlert");
-
-            if (student) {
-                errorAlert.classList.add("d-none");
-                resultCard.classList.remove("d-none");
-
-                document.getElementById("studentName").innerText = student.name;
-                document.getElementById("displayRoll").innerText = rollNumInput;
-                document.getElementById("displayClass").innerText = student.className;
-                document.getElementById("overallStatus").innerText = student.status;
-
-                const tableBody = document.getElementById("marksTableBody");
-                tableBody.innerHTML = "";
-
-                let totalMarksAll = 0;
-                let obtainedMarksAll = 0;
-
-                student.subjects.forEach(sub => {
-                    totalMarksAll += sub.total;
-                    obtainedMarksAll += sub.obtained;
-
-                    const row = `
-                        <tr>
-                            <td class="fw-semibold">${sub.name}</td>
-                            <td>${sub.total}</td>
-                            <td>${sub.obtained}</td>
-                            <td><span class="badge bg-secondary">${sub.grade}</span></td>
-                        </tr>
-                    `;
-                    tableBody.innerHTML += row;
-                });
-
-                document.getElementById("totalScore").innerText = `${obtainedMarksAll} / ${totalMarksAll}`;
-            } else {
-                resultCard.classList.add("d-none");
-                errorAlert.classList.remove("d-none");
-            }
-        });
-    </script>
-</body>
->>>>>>> da4470e6f8637bdaa691c9ef6db40131102b8424
 </html>

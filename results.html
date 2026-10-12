@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future Academy - Check Results</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                <i class="fa-solid fa-graduation-cap me-2"></i>Bright Future Academy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="results.html">Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container py-3">
+            <h1 class="fw-bold display-4"><i class="fa-solid fa-square-poll-vertical me-2"></i>Student Examination Results</h1>
+            <p class="lead">Enter your Roll Number below to view your detailed academic performance & scorecard.</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-5">
+        <div class="container py-3">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
+                        <div class="text-center mb-4">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex p-3 mb-2">
+                                <i class="fa-solid fa-id-card fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold text-dark">Search Portal</h3>
+                            <p class="text-muted small mb-0">Official Examination Portal for Session 2025-2026</p>
+                        </div>
+
+                        <form id="resultForm">
+                            <div class="mb-3">
+                                <label for="rollNo" class="form-label fw-bold text-secondary">Enter Roll Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light text-primary border-secondary-subtle"><i class="fa-solid fa-hashtag"></i></span>
+                                    <input type="text" class="form-control form-control-lg border-secondary-subtle fs-6" id="rollNo" placeholder="e.g. 101, 102, 103" required>
+                                </div>
+                                <div class="form-text mt-2"><i class="fa-solid fa-circle-info text-primary me-1"></i>Demo Roll Numbers to test: <strong>101</strong>, <strong>102</strong>, or <strong>103</strong></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm py-3 mt-2">
+                                <i class="fa-solid fa-magnifying-glass me-2"></i>Check Result
+                            </button>
+                        </form>
+
+                        <!-- Dynamic Result Display Area -->
+                        <div id="resultOutput" class="mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toppers Board Section -->
+    <section class="py-5 bg-white border-top">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark mb-2 px-3 py-2 fs-6 fw-bold"><i class="fa-solid fa-trophy me-1"></i>Hall of Fame</span>
+                <h2 class="fw-bold">Academy Session Toppers</h2>
+                <p class="text-muted">Celebrating top achievers in recent evaluation exams</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-light">
+                        <span class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle px-3 py-1 rounded-pill">1st Position</span>
+                        <div class="py-3 mt-2">
+                            <i class="fa-solid fa-award text-warning fa-3x mb-2"></i>
+                            <h5 class="fw-bold mb-1">Ahmed Raza</h5>
+                            <p class="text-muted small mb-1">Frontend Web Development</p>
+                            <span class="fw-bold text-success fs-5">485 / 500 (97%)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-light">
+                        <span class="badge bg-secondary position-absolute top-0 start-50 translate-middle px-3 py-1 rounded-pill">2nd Position</span>
+                        <div class="py-3 mt-2">
+                            <i class="fa-solid fa-award text-secondary fa-3x mb-2"></i>
+                            <h5 class="fw-bold mb-1">Fatima Noor</h5>
+                            <p class="text-muted small mb-1">Python & Machine Learning</p>
+                            <span class="fw-bold text-success fs-5">472 / 500 (94.4%)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 bg-light">
+                        <span class="badge bg-danger position-absolute top-0 start-50 translate-middle px-3 py-1 rounded-pill">3rd Position</span>
+                        <div class="py-3 mt-2">
+                            <i class="fa-solid fa-award text-danger fa-3x mb-2"></i>
+                            <h5 class="fw-bold mb-1">Hamza Ali</h5>
+                            <p class="text-muted small mb-1">MDCAT Preparation</p>
+                            <span class="fw-bold text-success fs-5">465 / 500 (93%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2026 Bright Future Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

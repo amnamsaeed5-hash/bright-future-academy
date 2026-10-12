@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Admission Form Handling & Custom Validation
 document.addEventListener('DOMContentLoaded', () => {
 
